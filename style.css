@@ -1,0 +1,652 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #081b29;
+    color: white;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: rgba(8, 27, 41, 0.97);
+    padding: 18px 0;
+    box-shadow: 0 2px 15px rgba(0, 238, 255, 0.15);
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 700;
+    color: white !important;
+}
+
+.navbar-brand span {
+    color: #00eeff;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00eeff !important;
+    text-shadow: 0 0 10px #00eeff;
+}
+
+.navbar-toggler {
+    border: 1px solid #00eeff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 10px #00eeff;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    background:
+        radial-gradient(circle at 80% 50%,
+        rgba(0, 238, 255, 0.08),
+        transparent 30%),
+        #081b29;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding-right: 30px;
+}
+
+.hello-text {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 span {
+    color: #00eeff;
+    text-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
+}
+
+.hero-description {
+    max-width: 580px;
+    color: #d5e2e8;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #00eeff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00eeff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #00eeff;
+    color: #081b29;
+    box-shadow: 0 0 20px #00eeff;
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.glow-btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: #00eeff;
+    color: #081b29;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 15px #00eeff;
+    transition: 0.3s;
+}
+
+.glow-btn:hover {
+    color: #081b29;
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px #00eeff;
+}
+
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.profile-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-glow {
+    width: 360px;
+    height: 360px;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        45deg,
+        #00eeff,
+        #8a2be2,
+        #ff00ff,
+        #00eeff
+    );
+
+    box-shadow:
+        0 0 30px #00eeff,
+        0 0 60px #8a2be2,
+        0 0 90px rgba(255, 0, 255, 0.4);
+
+    animation: glow 4s ease-in-out infinite;
+}
+
+.profile-image {
+    width: 348px;
+    height: 348px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #081b29;
+}
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 0 20px #00eeff,
+            0 0 40px #8a2be2;
+    }
+
+    50% {
+        box-shadow:
+            0 0 40px #00eeff,
+            0 0 80px #ff00ff;
+    }
+
+    100% {
+        box-shadow:
+            0 0 20px #00eeff,
+            0 0 40px #8a2be2;
+    }
+}
+
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.section {
+    padding: 100px 0;
+    background: #081b29;
+}
+
+.dark-section {
+    background: #061520;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.section-title h2 span {
+    color: #00eeff;
+}
+
+.section-title p {
+    color: #aebfc7;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-circle {
+    width: 230px;
+    height: 230px;
+    border: 4px solid #00eeff;
+    border-radius: 50%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 20px #00eeff,
+        0 0 50px rgba(138, 43, 226, 0.6);
+}
+
+.about-circle i {
+    font-size: 100px;
+    color: #00eeff;
+}
+
+#about h3 {
+    color: #00eeff;
+    margin-bottom: 20px;
+}
+
+#about p {
+    color: #c8d6dc;
+    line-height: 1.8;
+}
+
+.about-info {
+    margin-top: 25px;
+}
+
+.about-info strong {
+    color: #00eeff;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skill-card {
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+
+    background: #0b2638;
+
+    border: 1px solid rgba(0, 238, 255, 0.25);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00eeff;
+
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.2);
+}
+
+.skill-card i {
+    font-size: 45px;
+    color: #00eeff;
+}
+
+.skill-card h4 {
+    margin: 15px 0;
+}
+
+.skill-card p {
+    color: #b8cbd3;
+    font-size: 14px;
+}
+
+.progress {
+    height: 8px;
+    background: #172f3e;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background: #00eeff;
+    color: #081b29;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.project-card {
+    height: 100%;
+    padding: 30px;
+
+    background: #0b2638;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(0, 238, 255, 0.2);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00eeff;
+
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.2);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #00eeff;
+
+    color: #081b29;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.project-card h4 {
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #b8cbd3;
+    line-height: 1.7;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.project-tech span {
+    padding: 5px 10px;
+
+    border: 1px solid #00eeff;
+
+    border-radius: 20px;
+
+    color: #00eeff;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   EDUCATION
+========================================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.timeline-icon {
+    min-width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #00eeff;
+
+    color: #081b29;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    box-shadow: 0 0 15px #00eeff;
+}
+
+.timeline-content {
+    background: #0b2638;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    flex: 1;
+
+    border-left: 3px solid #00eeff;
+}
+
+.timeline-content span {
+    color: #00eeff;
+    font-size: 14px;
+}
+
+.timeline-content h4 {
+    margin: 8px 0;
+}
+
+.timeline-content p {
+    color: #b8cbd3;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-form {
+    background: #0b2638;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(0, 238, 255, 0.2);
+}
+
+.form-control {
+    background: #081b29;
+    border: 1px solid #294858;
+    color: white;
+    padding: 13px;
+}
+
+.form-control:focus {
+    background: #081b29;
+    color: white;
+    border-color: #00eeff;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 0.3);
+}
+
+.form-control::placeholder {
+    color: #8298a3;
+}
+
+#formMessage {
+    margin-top: 20px;
+    color: #00eeff;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 30px 0;
+    background: #061520;
+    border-top: 1px solid rgba(0, 238, 255, 0.15);
+}
+
+footer p {
+    color: #aebfc7;
+    margin-bottom: 15px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-icons a {
+    color: #00eeff;
+    font-size: 20px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        text-align: center;
+        padding: 130px 20px 70px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .profile-glow {
+        width: 290px;
+        height: 290px;
+    }
+
+    .profile-image {
+        width: 278px;
+        height: 278px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .profile-glow {
+        width: 240px;
+        height: 240px;
+    }
+
+    .profile-image {
+        width: 228px;
+        height: 228px;
+    }
+
+    .section {
+        padding: 70px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
